@@ -854,11 +854,15 @@
       .hero-stats .stat .num { font-size: 1.4rem; }
     }
 
-    /* Animations */
+    /* Animations - progressive enhancement: content visible by default, JS enhances */
     .reveal {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s;
+    }
+    .js .reveal {
       opacity: 0;
       transform: translateY(30px);
-      transition: all 0.6s;
     }
     .reveal.visible {
       opacity: 1;
@@ -1179,6 +1183,8 @@
   </button>
 
   <script>
+    document.documentElement.classList.add('js');
+
     // ---- Data ----
     const skillsData = [
       { icon: 'fab fa-aws', name: 'AWS', desc: 'EC2, EKS, Lambda, RDS, S3, IAM', pct: 95 },
