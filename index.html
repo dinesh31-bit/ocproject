@@ -3,9 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DevOps engineer and cloud infrastructure architect specializing in Kubernetes, Terraform, CI/CD, and observability.">
+  <meta property="og:title" content="Alex Rivera - DevOps Engineer Portfolio">
+  <meta property="og:description" content="Designing, automating, and scaling cloud infrastructure for high-availability systems used by millions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/dinesh31-bit/ocproject">
+  <meta property="og:image" content="https://github.com/dinesh31-bit/ocproject/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alex Rivera - DevOps Engineer Portfolio">
+  <meta name="twitter:description" content="Designing, automating, and scaling cloud infrastructure for high-availability systems used by millions.">
+  <meta name="twitter:image" content="https://github.com/dinesh31-bit/ocproject/og-image.png">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
   <title>DevOps Engineer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
   <style>
     :root {
       --bg-primary: #0a0a0f;
@@ -64,6 +77,30 @@
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg-primary); }
     ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--accent);
+      color: #fff;
+      border-radius: var(--radius-sm);
+      z-index: 2000;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: top 0.2s;
+    }
+    .skip-link:focus {
+      top: 0.5rem;
+    }
+
+    /* Focus visible */
+    *:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
 
     /* Particle Canvas */
     #particles-canvas {
@@ -857,6 +894,8 @@
 </head>
 <body>
 
+  <a href="#main" class="skip-link">Skip to content</a>
+
   <canvas id="particles-canvas"></canvas>
   <div class="cursor-glow" id="cursorGlow"></div>
 
@@ -880,6 +919,8 @@
       </button>
     </div>
   </nav>
+
+  <main id="main">
 
   <!-- Hero -->
   <section class="hero" id="hero">
@@ -923,7 +964,7 @@
     <div class="about-grid">
       <div class="about-image reveal">
         <div class="glow-ring"></div>
-        <div class="img-placeholder">
+        <div class="img-placeholder" role="img" aria-label="Alex Rivera portrait">
           <i class="fas fa-user-astronaut"></i>
         </div>
       </div>
@@ -1116,6 +1157,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer>
     <div class="socials">
@@ -1222,7 +1265,7 @@
         const card = document.createElement('div');
         card.className = 'project-card reveal';
         card.innerHTML = `
-          <div class="preview"><i class="${p.icon}"></i></div>
+          <div class="preview" role="img" aria-label="${p.title} screenshot"><i class="${p.icon}"></i></div>
           <div class="body">
             <h4>${p.title}</h4>
             <p>${p.desc}</p>
@@ -1345,6 +1388,7 @@
     let particles = [];
     let mouse = { x: null, y: null };
     let animFrame;
+    let accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
 
     function resizeCanvas() {
       canvas.width = window.innerWidth;
@@ -1383,9 +1427,7 @@
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        const style = getComputedStyle(document.documentElement);
-        const accent = style.getPropertyValue('--accent').trim();
-        ctx.fillStyle = accent;
+        ctx.fillStyle = accentColor;
         ctx.globalAlpha = this.opacity;
         ctx.fill();
         ctx.globalAlpha = 1;
@@ -1405,10 +1447,8 @@
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < 120) {
-            const style = getComputedStyle(document.documentElement);
-            const accent = style.getPropertyValue('--accent').trim();
             ctx.beginPath();
-            ctx.strokeStyle = accent;
+            ctx.strokeStyle = accentColor;
             ctx.globalAlpha = 0.1 * (1 - dist / 120);
             ctx.lineWidth = 0.5;
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -1439,6 +1479,8 @@
       const isDark = html.getAttribute('data-theme') === 'dark';
       html.setAttribute('data-theme', isDark ? 'light' : 'dark');
       icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+      // Re-cache accent color for particles
+      accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
     });
 
     // ---- Mobile Menu ----
@@ -1456,7 +1498,13 @@
         if (window.scrollY >= top) current = s.id;
       });
       navLinks.querySelectorAll('a').forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
+        const isActive = a.getAttribute('href') === `#${current}`;
+        a.classList.toggle('active', isActive);
+        if (isActive) {
+          a.setAttribute('aria-current', 'page');
+        } else {
+          a.removeAttribute('aria-current');
+        }
       });
     });
 
