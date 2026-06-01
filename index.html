@@ -1263,6 +1263,21 @@
       skillsGrid.appendChild(card);
     });
 
+    // ---- Intersection Observer ----
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          const fill = entry.target.querySelector('.skill-bar .fill');
+          if (fill && !fill.classList.contains('animated')) {
+            fill.classList.add('animated');
+            fill.style.width = fill.dataset.width + '%';
+          }
+          if (entry.target.closest('.hero-stats')) animateCounters();
+        }
+      });
+    }, { threshold: 0.15 });
+
     // ---- Render Projects ----
     const projectsGrid = document.getElementById('projectsGrid');
     function renderProjects(filter = 'all') {
@@ -1285,7 +1300,6 @@
         `;
         projectsGrid.appendChild(card);
       });
-      // Re-observe new cards
       document.querySelectorAll('#projectsGrid .reveal').forEach(el => observer.observe(el));
     }
     renderProjects();
@@ -1352,25 +1366,7 @@
       });
     }
 
-    // ---- Intersection Observer ----
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          // Skill bars
-          const fill = entry.target.querySelector('.skill-bar .fill');
-          if (fill && !fill.classList.contains('animated')) {
-            fill.classList.add('animated');
-            fill.style.width = fill.dataset.width + '%';
-          }
-          // Stat counters
-          if (entry.target.closest('.hero-stats')) animateCounters();
-        }
-      });
-    }, { threshold: 0.15 });
-
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    // Also observe hero stats directly
     document.querySelectorAll('.hero-stats .num').forEach(el => observer.observe(el));
 
     // ---- Terminal auto-type ----
