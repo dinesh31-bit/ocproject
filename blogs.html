@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Journal — Wild &amp; Alive</title>
+<meta name="description" content="The Wild & Alive Journal — cinematic field notes and long-form stories on forests, oceans, birds, mammals, conservation and photography.">
+<meta property="og:title" content="The Journal — Wild & Alive">
+<meta property="og:description" content="Field notes from the wild — forests, oceans, birds, mammals and the people working to protect them.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://example.com/blogs.html">
+<meta property="og:image" content="https://picsum.photos/id/1015/1200/630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Journal — Wild & Alive">
+<meta name="twitter:description" content="Field notes from the wild — forests, oceans, birds, mammals and the people working to protect them.">
+<meta name="twitter:image" content="https://picsum.photos/id/1015/1200/630">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+<link rel="canonical" href="https://example.com/blogs.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "The Journal — Wild & Alive",
+  "url": "https://example.com/blogs.html",
+  "description": "Cinematic field notes and long-form stories on forests, oceans, birds, mammals, conservation and photography.",
+  "isPartOf": {
+    "@type": "Blog",
+    "name": "Wild & Alive Journal",
+    "url": "https://example.com/blogs.html"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/blog.css">
+<noscript><style>[data-reveal]{opacity:1 !important;transform:none !important;filter:none !important;clip-path:none !important;}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== LOADER ===================== -->
+<div class="loader" role="status" aria-live="polite">
+  <div class="loader-tree" aria-hidden="true">
+    <svg viewBox="0 0 90 110">
+      <g class="trunk">
+        <rect x="40" y="70" width="10" height="35" fill="#5C4033" rx="2"/>
+        <g class="loader-canopy">
+          <circle cx="45" cy="45" r="34" fill="#0B3D2E"/>
+          <circle cx="30" cy="55" r="20" fill="#145c44"/>
+          <circle cx="60" cy="55" r="20" fill="#145c44"/>
+        </g>
+      </g>
+    </svg>
+    <span class="loader-bird" style="top:20px;">𓅃</span>
+  </div>
+  <p class="loader-label">Entering the wild…</p>
+  <span class="loader-percent">0%</span>
+</div>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- ===================== NAV ===================== -->
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a href="nature-index.html" class="brand"><span class="brand-mark">🌿</span> Wild &amp; Alive</a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="nature-index.html">Home</a></li>
+        <li><a href="animals.html">Animals</a></li>
+        <li><a href="blogs.html" aria-current="page">Blogs</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" data-sound-toggle aria-pressed="false" aria-label="Toggle ambient forest sound" title="Ambient sound">🔈</button>
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle light/dark theme" title="Toggle theme">🌓</button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== PAGE HERO (lite) ===================== -->
+  <section class="hero-lite gradient-anim" data-ambient="firefly:8,leaf:6">
+    <div class="ambient-layer">
+      <div class="fog"></div>
+      <div class="fog fog-2"></div>
+    </div>
+    <div class="container hero-lite-inner">
+      <p class="eyebrow" data-reveal="up">Field Notes &amp; Long-Form Stories</p>
+      <h1 data-reveal="mask">The Journal</h1>
+      <p class="hero-lite-sub" data-reveal="up" data-reveal-delay="0.15">
+        Dispatches from forests, reefs and skies — reporting on the wild and the people working to protect it.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== SEARCH + FILTERS ===================== -->
+  <section class="section blog-controls">
+    <div class="container">
+      <form class="search-bar" role="search" data-reveal="up" id="blog-search-form">
+        <label class="sr-only" for="blog-search">Search articles by title or tag</label>
+        <input type="search" id="blog-search" name="q" placeholder="Search stories — “reef”, “forest”, “tiger”…" autocomplete="off">
+      </form>
+      <div class="filter-chips" role="group" aria-label="Filter articles by category" data-reveal="up" data-reveal-delay="0.1">
+        <button class="chip active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-filter="forests" aria-pressed="false">Forests</button>
+        <button class="chip" type="button" data-filter="marine" aria-pressed="false">Marine</button>
+        <button class="chip" type="button" data-filter="birds" aria-pressed="false">Birds</button>
+        <button class="chip" type="button" data-filter="mammals" aria-pressed="false">Mammals</button>
+        <button class="chip" type="button" data-filter="conservation" aria-pressed="false">Conservation</button>
+        <button class="chip" type="button" data-filter="photography" aria-pressed="false">Photography</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ARTICLE GRID ===================== -->
+  <section class="section blog-grid-section">
+    <div class="container">
+      <p class="blog-results-count sr-only" id="blog-results-count" role="status" aria-live="polite"></p>
+      <div class="card-grid blog-grid" id="blog-grid">
+
+        <article class="glass-card blog-card" data-category="forests" data-title="the secret language of old-growth forests" data-reveal="up">
+          <a href="blog.html"><div class="card-media"><img src="https://picsum.photos/id/1015/700/460" alt="River winding through a misty old-growth forest valley" loading="lazy" width="700" height="460"></div></a>
+          <div class="card-body">
+            <span class="tag">Forests</span>
+            <h3><a href="blog.html">The Secret Language of Old-Growth Forests</a></h3>
+            <div class="meta-row"><span>Aria Solano</span><span>·</span><span>7 min read</span><span>·</span><span>Jun 18, 2026</span></div>
+          </div>
+        </article>
+
+        <article class="glass-card blog-card" data-category="marine" data-title="coral reefs cities beneath the waves" data-reveal="up" data-reveal-delay="0.05">
+          <a href="blog.html"><div class="card-media"><img src="https://picsum.photos/id/1053/700/460" alt="Coral reef teeming with tropical fish" loading="lazy" width="700" height="460"></div></a>
+          <div class="card-body">
+            <span class="tag">Marine</span>
+            <h3><a href="blog.html">Coral Reefs: Cities Beneath the Waves</a></h3>
+            <div class="meta-row"><span>Kofi Mensah</span><span>·</span><span>5 min read</span><span>·</span><span>Jun 09, 2026</span></div>
+          </div>
+        </article>
+
+        <article class="glass-card blog-card" data-category="conservation" data-title="tracking the ghost of the mountains snow leopard" data-reveal="up" data-reveal-delay="0.1">
+          <a href="blog.html"><div class="card-media"><img src="https://picsum.photos/id/1039/700/460" alt="Snow leopard resting on a rocky mountain ridge" loading="lazy" width="700" height="460"></div></a>
+          <div class="card-body">
+            <span class="tag">Conservation</span>
+            <h3><a href="blog.html">Tracking the Ghost of the Mountains</a></h3>
+            <div class="meta-row"><span>Priya Nair</span><span>·</span><span>9 min read</span><span>·</span><span>May 28, 2026</span></div>
+          </div>
+        </article>
+
+        <article class="glass-card blog-card" data-category="birds" data-title="the great migration a sky full of wings" data-reveal="up">
+          <a href="blog.html"><div class="card-media"><img src="https://picsum.photos/id/1069/700/460" alt="Scarlet macaw perched on a rainforest branch" loading="lazy" width="700" height="460"></div></a>
+          <div class="card-body">
+            <span class="tag">Birds</span>
+            <h3><a href="blog.html">The Great Migration: A Sky Full of Wings</a></h3>
+            <div class="meta-row"><span>Noa Berg</span><span>·</span><span>6 min read</span><span>·</span><span>May 21, 2026</span></div>
+          </div>
+        </article>
+
+        <article class="glass-card blog-card" data-category="mammals" data-title="among giants a week with elephant herds" data-reveal="up" data-reveal-delay="0.05">
+          <a href="blog.html"><div class="card-media"><img src="https://picsum.photos/id/1059/700/460" alt="Elephant herd crossing a golden savanna" loading="lazy" width="700" height="460"></div></a>
+          <div class="card-body">
+            <span class="tag">Mammals</span>
+            <h3><a href="blog.html">Among Giants: A Week With an Elephant Herd</a></h3>
+            <div class="meta-row"><span>Priya Nair</span><span>·</span><span>8 min read</span><span>·</span><span>May 12, 2026</span></div>
+          </div>
+        </article>
+
+        <article class="glass-card blog-card" data-category="photography" data-title="chasing light a photographers year in the wild" data-reveal="up" data-reveal-delay="0.1">
+          <a href="blog.html"><div class="card-media"><img src="https://picsum.photos/id/1084/700/460" alt="Deer silhouetted in golden hour light" loading="lazy" width="700" height="460"></div></a>
+          <div class="card-body">
+            <span class="tag">Photography</span>
+            <h3><a href="blog.html">Chasing Light: A Photographer's Year in the Wild</a></h3>
+            <div class="meta-row"><span>Kofi Mensah</span><span>·</span><span>6 min read</span><span>·</span><span>Apr 30, 2026</span></div>
+          </div>
+        </article>
+
+        <article class="glass-card blog-card" data-category="marine" data-title="the deep listening whale song across ocean basins" data-reveal="up">
+          <a href="blog.html"><div class="card-media"><img src="https://picsum.photos/id/1044/700/460" alt="Humpback whale breaching the ocean surface" loading="lazy" width="700" height="460"></div></a>
+          <div class="card-body">
+            <span class="tag">Marine</span>
+            <h3><a href="blog.html">The Deep Listening: Whale Song Across Ocean Basins</a></h3>
+            <div class="meta-row"><span>Aria Solano</span><span>·</span><span>7 min read</span><span>·</span><span>Apr 22, 2026</span></div>
+          </div>
+        </article>
+
+        <article class="glass-card blog-card" data-category="forests" data-title="mycorrhizal networks the wood wide web" data-reveal="up" data-reveal-delay="0.05">
+          <a href="blog.html"><div class="card-media"><img src="https://picsum.photos/id/1043/700/460" alt="Sunlight filtering through dense forest canopy" loading="lazy" width="700" height="460"></div></a>
+          <div class="card-body">
+            <span class="tag">Forests</span>
+            <h3><a href="blog.html">Mycorrhizal Networks: The Wood Wide Web</a></h3>
+            <div class="meta-row"><span>Noa Berg</span><span>·</span><span>8 min read</span><span>·</span><span>Apr 14, 2026</span></div>
+          </div>
+        </article>
+
+        <article class="glass-card blog-card" data-category="conservation" data-title="rewilding the corridor connecting fragmented jaguar habitat" data-reveal="up" data-reveal-delay="0.1">
+          <a href="blog.html"><div class="card-media"><img src="https://picsum.photos/id/1080/700/460" alt="Silverback gorilla in dense rainforest foliage" loading="lazy" width="700" height="460"></div></a>
+          <div class="card-body">
+            <span class="tag">Conservation</span>
+            <h3><a href="blog.html">Rewilding the Corridor: Reconnecting Fragmented Habitat</a></h3>
+            <div class="meta-row"><span>Priya Nair</span><span>·</span><span>10 min read</span><span>·</span><span>Apr 03, 2026</span></div>
+          </div>
+        </article>
+
+        <article class="glass-card blog-card" data-category="mammals" data-title="arctic survivors life below zero" data-reveal="up">
+          <a href="blog.html"><div class="card-media"><img src="https://picsum.photos/id/1072/700/460" alt="Arctic fox standing in snow" loading="lazy" width="700" height="460"></div></a>
+          <div class="card-body">
+            <span class="tag">Mammals</span>
+            <h3><a href="blog.html">Arctic Survivors: Life Below Zero</a></h3>
+            <div class="meta-row"><span>Noa Berg</span><span>·</span><span>5 min read</span><span>·</span><span>Mar 26, 2026</span></div>
+          </div>
+        </article>
+
+        <article class="glass-card blog-card" data-category="birds" data-title="dawn chorus decoding birdsong at first light" data-reveal="up" data-reveal-delay="0.05">
+          <a href="blog.html"><div class="card-media"><img src="https://picsum.photos/id/1062/700/460" alt="Owl perched on a branch at dusk" loading="lazy" width="700" height="460"></div></a>
+          <div class="card-body">
+            <span class="tag">Birds</span>
+            <h3><a href="blog.html">Dawn Chorus: Decoding Birdsong at First Light</a></h3>
+            <div class="meta-row"><span>Aria Solano</span><span>·</span><span>4 min read</span><span>·</span><span>Mar 15, 2026</span></div>
+          </div>
+        </article>
+
+        <article class="glass-card blog-card" data-category="photography" data-title="the patient lens waiting for the perfect frame" data-reveal="up" data-reveal-delay="0.1">
+          <a href="blog.html"><div class="card-media"><img src="https://picsum.photos/id/1074/700/460" alt="Bengal tiger resting in tall grass" loading="lazy" width="700" height="460"></div></a>
+          <div class="card-body">
+            <span class="tag">Photography</span>
+            <h3><a href="blog.html">The Patient Lens: Waiting for the Perfect Frame</a></h3>
+            <div class="meta-row"><span>Kofi Mensah</span><span>·</span><span>6 min read</span><span>·</span><span>Mar 02, 2026</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="blog-no-results" id="blog-no-results" hidden data-reveal="up">
+        <p class="eyebrow">No Stories Found</p>
+        <h3>Nothing matches that search yet</h3>
+        <p>Try a different keyword or clear the filters to see every story in the Journal.</p>
+        <button class="btn btn-ghost magnetic" type="button" id="blog-clear-filters">Clear Filters</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NEWSLETTER ===================== -->
+  <section class="section newsletter gradient-anim">
+    <div class="container newsletter-inner" data-reveal="up">
+      <h2>Join the Pack</h2>
+      <p>One story a week. No noise — just the wild, delivered.</p>
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <label class="sr-only" for="newsletter-email">Email address</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="you@wild.earth" required autocomplete="email">
+        <button class="btn btn-primary magnetic" type="submit">Subscribe <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="form-status" id="newsletter-status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-wave" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path class="wave-path" d="M0,60 C150,110 350,10 600,60 C850,110 1050,10 1200,60 L1200,120 L0,120 Z" fill="#07130E"/>
+    </svg>
+  </div>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <a href="nature-index.html" class="brand"><span class="brand-mark">🌿</span> Wild &amp; Alive</a>
+      <p>Cinematic stories from forests, oceans and skies — in service of the wild.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="animals.html">Animals</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">Newsletter</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Wild &amp; Alive. All rights reserved.</span>
+    <span>Made with care for the wild.</span>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/blog.js"></script>
+<script type="module">
+  import { gsap } from './js/main.js';
+
+  // Theme toggle
+  const themeBtn = document.querySelector('[data-theme-toggle]');
+  themeBtn?.addEventListener('click', () => {
+    const root = document.documentElement;
+    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+  });
+
+  // Newsletter (client-side only demo — no backend wired up)
+  const form = document.getElementById('newsletter-form');
+  const status = document.getElementById('newsletter-status');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    status.textContent = `Thanks! We'll be in touch at ${form.email.value}.`;
+    form.reset();
+  });
+</script>
+</body>
+</html>

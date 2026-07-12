@@ -1,0 +1,50 @@
+/* ==========================================================================
+   WILD & ALIVE — animals.html only
+   Page-title band + sticky filter bar for the species/ecosystem deep-dive.
+   Builds on top of base.css/animations.css tokens & components; does not
+   redefine anything shared (glass-card, chip, card-media, etc. stay as-is).
+   ========================================================================== */
+
+/* ---------- Page title band ---------- */
+.page-title-band {
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--nav-h);
+  padding-bottom: 2.5rem;
+  overflow: hidden;
+  background: var(--gradient-forest);
+}
+.page-title-inner { position: relative; z-index: 2; max-width: 760px; }
+.page-title-band h1 { font-size: clamp(2.6rem, 6vw, 5rem); }
+.page-title-sub { max-width: 560px; font-size: 1.05rem; margin-top: 1.25rem; }
+
+/* ---------- Sticky filter bar ---------- */
+.filter-bar {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 60;
+  background: var(--glass-bg);
+  border-bottom: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  padding-block: 1.1rem;
+}
+.filter-bar .filter-chips { margin-top: 0; }
+.filter-bar .chip { display: inline-flex; align-items: center; gap: 0.4rem; }
+
+/* ---------- Section anchor offset so sticky nav + filter bar never
+   overlap the top of a jumped-to section (e.g. animals.html#mammals) ---------- */
+#mammals, #birds, #marine, #reptiles, #insects, #forests {
+  scroll-margin-top: calc(var(--nav-h) + 74px);
+}
+
+/* ---------- Species card copy refinements ---------- */
+.animal-card .card-body p em { color: var(--off-white); font-style: italic; }
+
+@media (max-width: 560px) {
+  .filter-bar { padding-block: 0.85rem; }
+  .filter-bar .filter-chips { gap: 0.5rem; }
+  .filter-bar .chip { padding: 0.45rem 0.9rem; font-size: 0.78rem; }
+}

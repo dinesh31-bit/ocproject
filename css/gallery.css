@@ -1,0 +1,117 @@
+/* ==========================================================================
+   WILD & ALIVE — gallery.html only
+   Page-title band (duplicated intentionally from the animals-page pattern —
+   each page-specific stylesheet is self-contained per project convention),
+   Swiper spotlight skin, filter-chip empty state, and the custom lightbox.
+   ========================================================================== */
+
+/* ---------- Page title band ---------- */
+.page-title-band {
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--nav-h);
+  padding-bottom: 2.5rem;
+  overflow: hidden;
+  background: var(--gradient-forest);
+}
+.page-title-inner { position: relative; z-index: 2; max-width: 760px; }
+.page-title-band h1 { font-size: clamp(2.6rem, 6vw, 5rem); }
+.page-title-sub { max-width: 560px; font-size: 1.05rem; margin-top: 1.25rem; }
+
+/* ---------- Swiper "Featured Spotlight" carousel ---------- */
+.spotlight-swiper {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  padding-bottom: 3rem !important;
+}
+.spotlight-swiper .swiper-slide {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16/9;
+}
+.spotlight-swiper .swiper-slide img {
+  width: 100%; height: 100%; object-fit: cover; cursor: pointer;
+}
+.spotlight-caption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 2.5rem 2rem 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+  color: var(--white, #fff);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  pointer-events: none;
+}
+.spotlight-swiper .swiper-button-prev,
+.spotlight-swiper .swiper-button-next {
+  width: 46px; height: 46px; border-radius: 50%;
+  background: var(--glass-bg); border: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur));
+  color: var(--off-white);
+  transition: border-color var(--dur-fast), transform var(--dur-fast) var(--ease-out);
+}
+.spotlight-swiper .swiper-button-prev:hover,
+.spotlight-swiper .swiper-button-next:hover { border-color: var(--gold); transform: scale(1.05); }
+.spotlight-swiper .swiper-button-prev::after,
+.spotlight-swiper .swiper-button-next::after { font-size: 1.1rem; }
+.spotlight-swiper .swiper-pagination-bullet {
+  background: var(--off-white); opacity: 0.5;
+}
+.spotlight-swiper .swiper-pagination-bullet-active {
+  background: var(--gold); opacity: 1;
+}
+
+/* ---------- Filter chips empty state ---------- */
+.gallery-empty {
+  text-align: center; margin-top: 2rem; color: var(--gray-dim);
+}
+
+/* ---------- Masonry image filtering ---------- */
+#gallery-masonry img[data-hidden="true"] { display: none; }
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed; inset: 0; z-index: 2000;
+  display: flex; align-items: center; justify-content: center;
+}
+.lightbox[hidden] { display: none; }
+.lightbox-backdrop {
+  position: absolute; inset: 0; background: rgba(4, 10, 7, 0.92);
+  backdrop-filter: blur(6px);
+}
+.lightbox-content {
+  position: relative; z-index: 1; max-width: min(94vw, 1200px); max-height: 90vh;
+  display: flex; align-items: center; justify-content: center; gap: 1rem;
+  animation: lightboxIn 0.3s var(--ease-out);
+}
+@keyframes lightboxIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
+.lightbox-figure { max-width: 100%; max-height: 90vh; display: flex; flex-direction: column; gap: 0.75rem; }
+.lightbox-img {
+  max-width: min(88vw, 1100px); max-height: 78vh; width: auto; height: auto;
+  border-radius: var(--radius); object-fit: contain; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.lightbox-caption { text-align: center; color: var(--gray); font-size: 0.95rem; }
+.lightbox-close, .lightbox-prev, .lightbox-next {
+  position: absolute; z-index: 2;
+  width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--glass-bg); border: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur)); color: var(--off-white); cursor: pointer;
+  transition: border-color var(--dur-fast), transform var(--dur-fast) var(--ease-out);
+}
+.lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover { border-color: var(--gold); transform: scale(1.06); }
+.lightbox-close { top: -60px; right: 0; }
+.lightbox-prev { left: -70px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: -70px; top: 50%; transform: translateY(-50%); }
+
+@media (max-width: 900px) {
+  .lightbox-content { max-width: 100vw; padding-inline: 1rem; }
+  .lightbox-close { top: 1rem; right: 1rem; }
+  .lightbox-prev { left: 0.5rem; }
+  .lightbox-next { right: 0.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lightbox-content { animation: none; }
+}

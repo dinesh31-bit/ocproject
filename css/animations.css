@@ -1,0 +1,110 @@
+/* ==========================================================================
+   WILD & ALIVE — Motion library
+   Keyframes + reusable ambient-effect layers (fog, fireflies, leaves, stars).
+   Respect prefers-reduced-motion at the bottom.
+   ========================================================================== */
+
+/* ---------- Loader ---------- */
+@keyframes growTree { to { transform: scale(1); } }
+@keyframes sway { 0%, 100% { transform: rotate(-1.5deg); } 50% { transform: rotate(1.5deg); } }
+@keyframes loaderBird {
+  0% { transform: translate(-40px, 20px); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translate(140px, -60px); opacity: 0; }
+}
+
+/* ---------- Buttons ---------- */
+@keyframes rippleOut { to { transform: scale(6); opacity: 0; } }
+
+/* ---------- Ambient background layers ---------- */
+.ambient-layer { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+
+.fog { position: absolute; width: 160%; height: 60%; left: -30%; opacity: 0.35; filter: blur(40px);
+  background: radial-gradient(ellipse at center, rgba(180,200,190,0.5), transparent 70%);
+  animation: fogDrift 26s linear infinite;
+}
+.fog.fog-2 { top: 20%; animation-duration: 34s; animation-direction: reverse; opacity: 0.22; }
+.fog.fog-3 { top: 55%; animation-duration: 40s; opacity: 0.18; }
+@keyframes fogDrift {
+  0% { transform: translateX(-5%) translateY(0); }
+  50% { transform: translateX(5%) translateY(-2%); }
+  100% { transform: translateX(-5%) translateY(0); }
+}
+
+.leaf { position: absolute; top: -5%; font-size: 1.4rem; opacity: 0.85; animation: leafFall linear infinite; will-change: transform; }
+@keyframes leafFall {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  8% { opacity: 0.9; }
+  92% { opacity: 0.7; }
+  100% { transform: translate(var(--drift, 60px), 115vh) rotate(340deg); opacity: 0; }
+}
+
+.firefly { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: var(--gold);
+  box-shadow: 0 0 8px 3px rgba(255,200,87,0.7); animation: fireflyFloat 9s ease-in-out infinite, fireflyBlink 3s ease-in-out infinite; }
+@keyframes fireflyFloat {
+  0%, 100% { transform: translate(0,0); }
+  25% { transform: translate(30px, -40px); }
+  50% { transform: translate(-20px, -70px); }
+  75% { transform: translate(-40px, -20px); }
+}
+@keyframes fireflyBlink { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+
+.bird { position: absolute; font-size: 1.1rem; opacity: 0.8; animation: birdFly linear infinite; }
+@keyframes birdFly {
+  0% { transform: translate(-10vw, 0) scale(0.8); }
+  100% { transform: translate(110vw, -6vh) scale(1.1); }
+}
+
+.star { position: absolute; width: 2px; height: 2px; background: #fff; border-radius: 50%; animation: starTwinkle 4s ease-in-out infinite; }
+@keyframes starTwinkle { 0%, 100% { opacity: 0.15; } 50% { opacity: 0.9; } }
+
+.noise-overlay {
+  position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.035; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Gradient movement (animated brand backdrops) ---------- */
+.gradient-anim {
+  background: var(--gradient-mesh), var(--gradient-forest);
+  background-size: 200% 200%, 100% 100%;
+  animation: gradientShift 18s ease-in-out infinite;
+}
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 0%, 0 0; }
+  50% { background-position: 100% 60%, 0 0; }
+}
+
+/* ---------- Wave (footer) ---------- */
+.wave-path { animation: waveMove 10s linear infinite; }
+@keyframes waveMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ---------- Flip cards (Nature Facts) ---------- */
+.flip-card { perspective: 1400px; height: 260px; }
+.flip-inner {
+  position: relative; width: 100%; height: 100%; transition: transform 0.8s var(--ease-in-out);
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-inner, .flip-card:focus-within .flip-inner, .flip-card.is-flipped .flip-inner { transform: rotateY(180deg); }
+.flip-face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: var(--radius); padding: 2rem;
+  display: flex; flex-direction: column; justify-content: center; }
+.flip-back { transform: rotateY(180deg); }
+
+/* ---------- Progress / timeline ---------- */
+.progress-track { width: 100%; height: 6px; border-radius: 999px; background: rgba(255,255,255,0.1); overflow: hidden; }
+.progress-fill { height: 100%; border-radius: inherit; background: var(--gradient-gold); width: 0; transition: width 1.4s var(--ease-out); }
+
+/* ---------- Section reveal transforms (paired with GSAP in JS) ---------- */
+.reveal-up { transform: translateY(60px); }
+.reveal-scale { transform: scale(0.92); }
+.reveal-mask { clip-path: inset(0 0 100% 0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .fog, .leaf, .firefly, .bird, .star, .gradient-anim, .wave-path,
+  .loader-tree .trunk, .loader-canopy, .loader-bird {
+    animation: none !important;
+  }
+  .flip-inner { transition: none; }
+}

@@ -4,22 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="DevOps engineer and cloud infrastructure architect specializing in Kubernetes, Terraform, CI/CD, and observability.">
-  <meta property="og:title" content="Dinesh - DevOps Engineer Portfolio">
+  <meta property="og:title" content="Dinesh Reddy - DevOps Engineer Portfolio">
   <meta property="og:description" content="Designing, automating, and scaling cloud infrastructure for high-availability systems used by millions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://github.com/dinesh31-bit/ocproject">
   <meta property="og:image" content="https://github.com/dinesh31-bit/ocproject/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dinesh - DevOps Engineer Portfolio">
+  <meta name="twitter:title" content="Dinesh Reddy - DevOps Engineer Portfolio">
   <meta name="twitter:description" content="Designing, automating, and scaling cloud infrastructure for high-availability systems used by millions.">
   <meta name="twitter:image" content="https://github.com/dinesh31-bit/ocproject/og-image.png">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
-  <title>Dinesh - DevOps Engineer Portfolio</title>
+  <title>Dinesh Reddy - DevOps Engineer Portfolio</title>
   <link rel="canonical" href="https://github.com/dinesh31-bit/ocproject">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dinesh Reddy",
+    "jobTitle": "DevOps Engineer",
+    "url": "https://github.com/dinesh31-bit/ocproject",
+    "sameAs": [
+      "https://github.com/dinesh31-bit",
+      "https://linkedin.com/in/dinesh31-bit",
+      "https://twitter.com/dinesh31_bit"
+    ],
+    "knowsAbout": ["AWS", "GCP", "Kubernetes", "Terraform", "Docker", "Ansible", "CI/CD", "Prometheus", "ArgoCD"]
+  }
+  </script>
+  <meta name="theme-color" content="#0a0a0f">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" integrity="sha384-t1nt8BQoYMLFN5p42tRAtuAAFQaCQODekUVeKKZrEnEyp4H2R0RHFz0KWpmj7i8g">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" integrity="sha384-t1nt8BQoYMLFN5p42tRAtuAAFQaCQODekUVeKKZrEnEyp4H2R0RHFz0KWpmj7i8g" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" integrity="sha384-t1nt8BQoYMLFN5p42tRAtuAAFQaCQODekUVeKKZrEnEyp4H2R0RHFz0KWpmj7i8g"></noscript>
   <style>
     :root {
       --bg-primary: #0a0a0f;
@@ -901,7 +919,7 @@
 
   <a href="#main" class="skip-link">Skip to content</a>
 
-  <canvas id="particles-canvas"></canvas>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
   <div class="cursor-glow" id="cursorGlow"></div>
 
   <!-- Navbar -->
@@ -919,7 +937,7 @@
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
         <i class="fas fa-moon" aria-hidden="true"></i>
       </button>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
         <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
     </div>
@@ -934,8 +952,8 @@
         <span class="dot"></span>
         Available for opportunities
       </div>
-      <h1>Hi, I'm <span class="wave">👋</span><span style="display:block">Dinesh</span></h1>
-      <div class="typing-container">
+      <h1>Hi, I'm Dinesh Reddy <span class="wave">👋</span></h1>
+      <div class="typing-container" aria-live="polite" aria-atomic="true">
         <span id="typingText"></span><span class="cursor"></span>
       </div>
       <p>Designing, automating, and scaling cloud infrastructure for high-availability systems used by millions.</p>
@@ -947,7 +965,7 @@
           <i class="fas fa-code" aria-hidden="true"></i> View Work
         </a>
       </div>
-      <div class="hero-stats">
+      <div class="hero-stats" aria-live="polite" aria-atomic="true">
         <div class="stat"><div class="num" data-target="8">0</div><div class="label">Years Exp</div></div>
         <div class="stat"><div class="num" data-target="120">0</div><div class="label">Infra Deployments</div></div>
         <div class="stat"><div class="num" data-target="15">0</div><div class="label">Tools Mastered</div></div>
@@ -960,16 +978,16 @@
   </section>
 
   <!-- About -->
-  <section id="about">
+  <section id="about" aria-labelledby="about-heading">
     <div class="section-header reveal">
       <span class="tag">About</span>
-      <h2>Who I Am</h2>
+      <h2 id="about-heading">Who I Am</h2>
       <p>Cloud &amp; infrastructure engineer with a passion for automation, reliability, and developer experience.</p>
     </div>
     <div class="about-grid">
       <div class="about-image reveal">
         <div class="glow-ring"></div>
-        <div class="img-placeholder" role="img" aria-label="Dinesh portrait">
+        <div class="img-placeholder" role="img" aria-label="Dinesh Reddy portrait">
           <i class="fas fa-user-astronaut" aria-hidden="true"></i>
         </div>
       </div>
@@ -996,18 +1014,18 @@
     <div class="terminal-widget reveal">
       <div class="terminal-header">
         <div class="dots"><span></span><span></span><span></span></div>
-        <span class="title">~/dinesh — bash — 80x24</span>
+        <span class="title">~/dineshreddy — bash — 80x24</span>
       </div>
       <div class="terminal-body" id="terminalBody">
         <div class="line" style="animation-delay: 0.0s">
-          <span class="prompt">dinesh@devops:~$</span>
+          <span class="prompt">dineshreddy@devops:~$</span>
           <span class="cmd"> whoami</span>
         </div>
         <div class="line" style="animation-delay: 0.2s">
-          <span class="out">&nbsp;&nbsp;→ Dinesh, DevOps Engineer (8+ yrs)</span>
+          <span class="out">&nbsp;&nbsp;→ Dinesh Reddy, DevOps Engineer (8+ yrs)</span>
         </div>
         <div class="line" style="animation-delay: 0.4s">
-          <span class="prompt">dinesh@devops:~$</span>
+          <span class="prompt">dineshreddy@devops:~$</span>
           <span class="cmd"> cat /etc/skills</span>
         </div>
         <div class="line" style="animation-delay: 0.6s">
@@ -1020,14 +1038,14 @@
           <span class="out">&nbsp;&nbsp;→ pulumi, vault, istio, helm, argo-cd</span>
         </div>
         <div class="line" style="animation-delay: 1.2s">
-          <span class="prompt">dinesh@devops:~$</span>
+          <span class="prompt">dineshreddy@devops:~$</span>
           <span class="cmd"> uptime</span>
         </div>
         <div class="line" style="animation-delay: 1.4s">
           <span class="out">&nbsp;&nbsp;→ 08:42:36 up 365 days,  3:15,  1 user,  load average: 0.08, 0.03, 0.01</span>
         </div>
         <div class="line" style="animation-delay: 1.6s">
-          <span class="prompt">dinesh@devops:~$</span>
+          <span class="prompt">dineshreddy@devops:~$</span>
           <span class="cmd"><span class="highlight"> systemctl</span> <span class="highlight">status</span> <span class="highlight">passion</span></span>
         </div>
         <div class="line" style="animation-delay: 1.8s">
@@ -1040,7 +1058,7 @@
           <span class="success">&nbsp;&nbsp;→    Active: active (running) since 2016-03-14</span>
         </div>
         <div class="line" style="animation-delay: 2.4s">
-          <span class="prompt">dinesh@devops:~$</span>
+          <span class="prompt">dineshreddy@devops:~$</span>
           <span class="cmd"> <span class="info">_</span></span>
         </div>
       </div>
@@ -1048,20 +1066,20 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills">
+  <section id="skills" aria-labelledby="skills-heading">
     <div class="section-header reveal">
       <span class="tag">Skills</span>
-      <h2>Tech Stack</h2>
+      <h2 id="skills-heading">Tech Stack</h2>
       <p>Tools and platforms I use daily to ship reliable infrastructure.</p>
     </div>
     <div class="skills-grid" id="skillsGrid"></div>
   </section>
 
   <!-- Projects -->
-  <section id="projects">
+  <section id="projects" aria-labelledby="projects-heading">
     <div class="section-header reveal">
       <span class="tag">Projects</span>
-      <h2>Recent Work</h2>
+      <h2 id="projects-heading">Recent Work</h2>
       <p>Real-world infrastructure projects that improved reliability, cost, and velocity.</p>
     </div>
     <div class="projects-filter reveal">
@@ -1075,10 +1093,10 @@
   </section>
 
   <!-- Experience -->
-  <section id="experience">
+  <section id="experience" aria-labelledby="experience-heading">
     <div class="section-header reveal">
       <span class="tag">Experience</span>
-      <h2>Career Path</h2>
+      <h2 id="experience-heading">Career Path</h2>
       <p>Years of shipping production-grade infrastructure.</p>
     </div>
     <div class="timeline">
@@ -1114,10 +1132,10 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact">
+  <section id="contact" aria-labelledby="contact-heading">
     <div class="section-header reveal">
       <span class="tag">Contact</span>
-      <h2>Let's Talk</h2>
+      <h2 id="contact-heading">Let's Talk</h2>
       <p>Have a project, question, or just want to chat? Drop me a message.</p>
     </div>
     <div class="contact-grid">
@@ -1127,7 +1145,7 @@
         <div class="contact-methods">
           <div class="method">
             <i class="fas fa-envelope" aria-hidden="true"></i>
-            <div><div class="label">Email</div><div class="value">dinesh@devops.example</div></div>
+            <div><div class="label">Email</div><div class="value">dineshreddy@devops.example</div></div>
           </div>
           <div class="method">
             <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
@@ -1142,18 +1160,18 @@
       <form class="contact-form reveal" id="contactForm" novalidate>
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Your name" required>
-          <span class="error" id="nameError">Please enter your name</span>
+          <input type="text" id="name" placeholder="Your name" required autocomplete="name" aria-describedby="nameError">
+          <span class="error" id="nameError" role="alert">Please enter your name</span>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" placeholder="your@email.com" required>
-          <span class="error" id="emailError">Please enter a valid email</span>
+          <input type="email" id="email" placeholder="your@email.com" required autocomplete="email" aria-describedby="emailError">
+          <span class="error" id="emailError" role="alert">Please enter a valid email</span>
         </div>
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" placeholder="Tell me about your project..." required></textarea>
-          <span class="error" id="msgError">Message must be at least 10 characters</span>
+          <textarea id="message" placeholder="Tell me about your project..." required autocomplete="off" aria-describedby="msgError"></textarea>
+          <span class="error" id="msgError" role="alert">Message must be at least 10 characters</span>
         </div>
         <button type="submit" class="btn btn-primary">
           <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
@@ -1172,7 +1190,7 @@
       <a href="https://twitter.com/dinesh31_bit" aria-label="Twitter"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
       <a href="https://medium.com/@dinesh31-bit" aria-label="Medium"><i class="fab fa-medium-m" aria-hidden="true"></i></a>
     </div>
-    <p>&copy; 2026 Dinesh. Built with <i class="fas fa-heart" aria-hidden="true" style="color:var(--accent);"></i> and Infrastructure as Code.</p>
+    <p>&copy; 2026 Dinesh Reddy. Built with <i class="fas fa-heart" aria-hidden="true" style="color:var(--accent);"></i> and Infrastructure as Code.</p>
   </footer>
 
   <!-- Toast -->
@@ -1350,7 +1368,10 @@
     typeEffect();
 
     // ---- Stats Counter ----
+    let countersAnimated = false;
     function animateCounters() {
+      if (countersAnimated) return;
+      countersAnimated = true;
       document.querySelectorAll('.hero-stats .num').forEach(el => {
         const target = +el.dataset.target;
         const duration = 1500;
@@ -1495,7 +1516,10 @@
     // ---- Mobile Menu ----
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
-    menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
     // ---- Scroll handler (rAF throttled) ----
@@ -1549,16 +1573,28 @@
       // Name
       if (!nameInp.value.trim()) {
         nameErr.classList.add('show'); valid = false;
-      } else { nameErr.classList.remove('show'); }
+        nameInp.setAttribute('aria-invalid', 'true');
+      } else {
+        nameErr.classList.remove('show');
+        nameInp.removeAttribute('aria-invalid');
+      }
       // Email
       const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRe.test(emailInp.value.trim())) {
         emailErr.classList.add('show'); valid = false;
-      } else { emailErr.classList.remove('show'); }
+        emailInp.setAttribute('aria-invalid', 'true');
+      } else {
+        emailErr.classList.remove('show');
+        emailInp.removeAttribute('aria-invalid');
+      }
       // Message
       if (msgInp.value.trim().length < 10) {
         msgErr.classList.add('show'); valid = false;
-      } else { msgErr.classList.remove('show'); }
+        msgInp.setAttribute('aria-invalid', 'true');
+      } else {
+        msgErr.classList.remove('show');
+        msgInp.removeAttribute('aria-invalid');
+      }
 
       if (valid) {
         showToast('Message sent! I\'ll get back to you soon.');
@@ -1569,9 +1605,9 @@
     });
 
     // Live validation clearing
-    nameInp.addEventListener('input', () => nameErr.classList.remove('show'));
-    emailInp.addEventListener('input', () => emailErr.classList.remove('show'));
-    msgInp.addEventListener('input', () => msgErr.classList.remove('show'));
+    nameInp.addEventListener('input', () => { nameErr.classList.remove('show'); nameInp.removeAttribute('aria-invalid'); });
+    emailInp.addEventListener('input', () => { emailErr.classList.remove('show'); emailInp.removeAttribute('aria-invalid'); });
+    msgInp.addEventListener('input', () => { msgErr.classList.remove('show'); msgInp.removeAttribute('aria-invalid'); });
 
     // ---- Console Easter Egg ----
     console.log('%c🚀 DevOps Portfolio', 'font-size:2rem; font-weight:bold; color:#00d4aa');

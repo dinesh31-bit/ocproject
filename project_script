@@ -1,0 +1,665 @@
+You are an award-winning Creative Director, Senior UI/UX Designer, Motion Designer, and Full Stack Frontend Engineer.
+
+Your task is to design and build a world-class interactive website for a brand focused on Animals, Wildlife, Nature, Forests, Oceans, Birds, Conservation, and Education.
+
+The website should look like it belongs among the winners of Awwwards.com and CSS Design Awards.
+
+The design must not resemble a normal blog.
+
+It should feel like a cinematic experience.
+
+==================================================
+TECH STACK
+==================================================
+
+Use only:
+
+HTML5
+CSS3
+Vanilla JavaScript
+
+No React.
+No Vue.
+No Angular.
+
+You may use:
+
+GSAP
+Three.js
+Lenis Smooth Scroll
+Lottie
+Swiper.js
+Spline Viewer
+Matter.js (optional)
+
+Use ES6 modules.
+
+The project should be completely responsive.
+
+==================================================
+DESIGN STYLE
+==================================================
+
+The design language should combine:
+
+Apple
+National Geographic
+Discovery
+BBC Earth
+Tesla
+Awwwards
+Bruno Simon
+Stripe
+Nothing
+
+Mix all these styles together.
+
+The experience should feel:
+
+Elegant
+Immersive
+Premium
+Modern
+Cinematic
+Luxury
+Organic
+Minimal
+
+Avoid looking like a template.
+
+==================================================
+COLOR PALETTE
+==================================================
+
+Primary:
+Deep Forest Green (#0B3D2E)
+
+Secondary:
+Earth Brown (#5C4033)
+
+Accent:
+Leaf Green (#4CAF50)
+
+Highlight:
+Golden Sun (#FFC857)
+
+Background:
+Very Dark Forest (#07130E)
+
+Text:
+White
+Off White
+Light Gray
+
+Use glassmorphism where appropriate.
+
+Use gradients.
+
+Use glowing elements sparingly.
+
+==================================================
+TYPOGRAPHY
+==================================================
+
+Use premium fonts.
+
+Headings:
+Playfair Display
+
+Body:
+Inter
+
+Large hero typography.
+
+Elegant spacing.
+
+==================================================
+WEBSITE GOAL
+==================================================
+
+The website is dedicated to:
+
+Animals
+
+Wildlife
+
+Nature
+
+Forests
+
+Birds
+
+Marine Life
+
+Environmental Awareness
+
+Conservation
+
+Photography
+
+Educational Blogs
+
+The purpose is to inspire people to appreciate nature while reading beautiful articles.
+
+==================================================
+OVERALL EXPERIENCE
+==================================================
+
+The website should feel like entering a rainforest.
+
+Everything should have motion.
+
+Nothing should feel static.
+
+Use:
+
+Scroll animations
+
+Parallax
+
+Floating particles
+
+Leaves moving
+
+Fog
+
+Animated gradients
+
+Light rays
+
+Flying birds
+
+Butterflies
+
+Fireflies
+
+Smooth transitions
+
+Micro interactions
+
+Hover effects
+
+Animated cards
+
+Page transitions
+
+Morphing buttons
+
+==================================================
+LANDING PAGE
+==================================================
+
+Create a breathtaking hero section.
+
+Include:
+
+Huge cinematic background
+
+3D forest
+
+Animated fog
+
+Birds flying
+
+Sun rays
+
+Moving clouds
+
+Floating leaves
+
+Mouse parallax
+
+3D camera movement
+
+The title should animate.
+
+Example:
+
+Explore the Wild
+
+Where Nature Tells Every Story
+
+The CTA button should ripple on hover.
+
+==================================================
+3D EXPERIENCE
+==================================================
+
+Use Three.js.
+
+Include:
+
+3D Earth
+
+3D Trees
+
+3D Animals
+
+3D Floating Rocks
+
+Particles
+
+Fireflies
+
+Animated stars
+
+Interactive camera movement
+
+Mouse controlled rotation
+
+Subtle depth effects
+
+The 3D scene should never reduce readability.
+
+==================================================
+SCROLL EXPERIENCE
+==================================================
+
+Every section should animate into view.
+
+Use GSAP ScrollTrigger.
+
+Include:
+
+Fade
+
+Scale
+
+Rotate
+
+Slide
+
+Blur reveal
+
+Mask reveal
+
+Image reveal
+
+Pinned sections
+
+Horizontal scrolling galleries
+
+Text splitting animations
+
+==================================================
+SECTIONS
+==================================================
+
+1.
+Hero
+
+2.
+Featured Animals
+
+3.
+Wildlife Categories
+
+Mammals
+
+Birds
+
+Marine
+
+Reptiles
+
+Insects
+
+Forests
+
+4.
+Latest Blogs
+
+Beautiful cards
+
+Large images
+
+Reading time
+
+Author
+
+Date
+
+Hover animations
+
+5.
+Featured Photography
+
+Masonry layout
+
+Hover zoom
+
+Lightbox
+
+6.
+Interactive World Map
+
+Click continents
+
+View wildlife
+
+7.
+Species of the Week
+
+Large animated card
+
+8.
+Conservation Projects
+
+Timeline
+
+Animated progress
+
+9.
+Nature Facts
+
+Cards flipping
+
+10.
+Newsletter
+
+Animated form
+
+11.
+Footer
+
+Minimal
+
+Animated waves
+
+==================================================
+BLOG PAGE
+==================================================
+
+The blog page should feel premium.
+
+Features:
+
+Large hero image
+
+Progress bar
+
+Estimated reading time
+
+Sticky table of contents
+
+Floating share buttons
+
+Related articles
+
+Animated headings
+
+Image zoom
+
+Pull quotes
+
+Dark mode friendly
+
+==================================================
+BLOG CARDS
+==================================================
+
+Cards should have:
+
+Glassmorphism
+
+Rounded corners
+
+Hover lift
+
+Image zoom
+
+Glow border
+
+Animated underline
+
+Floating effect
+
+==================================================
+SEARCH
+==================================================
+
+Beautiful animated search.
+
+Search should filter instantly.
+
+==================================================
+CATEGORY FILTER
+==================================================
+
+Animated chips.
+
+Smooth transitions.
+
+==================================================
+LOADING EXPERIENCE
+==================================================
+
+Before entering website:
+
+Animated logo
+
+Growing tree
+
+Flying birds
+
+Loading percentage
+
+Background music option
+
+==================================================
+PAGE TRANSITIONS
+==================================================
+
+Every page transition should feel cinematic.
+
+Use GSAP.
+
+==================================================
+CURSOR
+==================================================
+
+Custom cursor.
+
+Cursor expands over links.
+
+Leaves follow cursor.
+
+==================================================
+MOUSE EFFECTS
+==================================================
+
+Mouse parallax.
+
+Floating layers.
+
+Magnetic buttons.
+
+==================================================
+BACKGROUND EFFECTS
+==================================================
+
+Animated gradients
+
+Noise texture
+
+Fog
+
+Particles
+
+Fireflies
+
+Moving leaves
+
+Stars at night
+
+==================================================
+SOUNDS
+==================================================
+
+Optional ambient sounds:
+
+Birds
+
+Forest
+
+Rain
+
+Ocean
+
+Toggle button.
+
+==================================================
+PERFORMANCE
+==================================================
+
+Lazy load images.
+
+Use Intersection Observer.
+
+Compress assets.
+
+60 FPS animations.
+
+Responsive images.
+
+SEO friendly.
+
+==================================================
+ACCESSIBILITY
+==================================================
+
+Keyboard navigation.
+
+ARIA labels.
+
+Color contrast.
+
+Reduced motion support.
+
+==================================================
+SEO
+==================================================
+
+Semantic HTML
+
+Open Graph
+
+Twitter Cards
+
+JSON-LD
+
+Meta tags
+
+Sitemap ready
+
+==================================================
+ANIMATIONS
+==================================================
+
+Everything should have premium motion.
+
+Examples:
+
+Hero reveal
+
+Text stagger
+
+Image masks
+
+Cards floating
+
+Button ripple
+
+Hover glow
+
+Gradient movement
+
+Cloud movement
+
+Tree sway
+
+Bird flight
+
+Leaf fall
+
+Water ripple
+
+Wave motion
+
+==================================================
+MOBILE EXPERIENCE
+==================================================
+
+Not a simplified version.
+
+Maintain premium feel.
+
+Touch interactions.
+
+Optimized animations.
+
+==================================================
+FILE STRUCTURE
+==================================================
+
+Organize as:
+
+index.html
+
+blogs.html
+
+blog.html
+
+animals.html
+
+gallery.html
+
+about.html
+
+contact.html
+
+css/
+
+js/
+
+images/
+
+videos/
+
+fonts/
+
+assets/
+
+three/
+
+animations/
+
+==================================================
+CODE QUALITY
+==================================================
+
+Write production-ready code.
+
+Reusable components.
+
+Well-commented.
+
+Modular JavaScript.
+
+Readable CSS.
+
+Avoid duplication.
+
+==================================================
+FINAL GOAL
+==================================================
+
+The final website should make users feel they are walking inside a living rainforest while reading beautiful stories about wildlife and nature.
+
+Every scroll should feel magical.
+
+Every interaction should delight the user.
+
+The website should be visually comparable to websites featured on Awwwards.
+
+Build the entire project from scratch with complete HTML, CSS, and JavaScript source code.

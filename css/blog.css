@@ -1,0 +1,151 @@
+/* ==========================================================================
+   WILD & ALIVE — Blog pages (blogs.html listing + blog.html article)
+   Page-specific styles only. Reuses tokens/components from base.css and
+   the motion keyframes/ambient layers from animations.css.
+   ========================================================================== */
+
+/* ---------- Hero-lite (blogs.html page-title band) ---------- */
+.hero-lite {
+  position: relative; min-height: 42vh; display: flex; align-items: center;
+  padding-top: var(--nav-h); overflow: hidden;
+}
+.hero-lite-inner { position: relative; z-index: 2; max-width: 760px; }
+.hero-lite h1 { margin-bottom: 0.5rem; }
+.hero-lite-sub { max-width: 560px; font-size: 1.05rem; }
+
+/* ---------- Search + filter controls block ---------- */
+.blog-controls { padding-block: clamp(2.5rem, 5vw, 4rem); }
+.blog-controls .search-bar input { text-align: center; }
+
+/* ---------- Blog grid section ---------- */
+.blog-grid-section { padding-top: 0; }
+.blog-grid { transition: opacity 0.3s var(--ease-out); }
+
+/* Card visibility states driven by js/blog.js — combines with [data-reveal] */
+.blog-card {
+  transition: opacity var(--dur-med) var(--ease-out), transform var(--dur-med) var(--ease-out),
+    box-shadow var(--dur-med) var(--ease-out), border-color var(--dur-med);
+}
+.blog-card.is-hidden {
+  display: none;
+}
+.blog-card.is-filtering-out {
+  opacity: 0; transform: scale(0.94); pointer-events: none;
+}
+
+/* ---------- No-results state ---------- */
+.blog-no-results {
+  text-align: center; max-width: 480px; margin-inline: auto; padding-block: 3rem;
+}
+.blog-no-results h3 { margin-bottom: 0.75rem; }
+.blog-no-results p { margin-bottom: 1.5rem; }
+.blog-no-results[hidden] { display: none; }
+
+/* ==========================================================================
+   blog.html — single article template
+   ========================================================================== */
+
+/* ---------- Reading progress bar (fixed at very top of viewport) ---------- */
+.reading-progress {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 600;
+  height: 4px; background: rgba(255,255,255,0.08);
+}
+.reading-progress .progress-fill { transition: none; } /* driven per-frame by JS, not CSS transition */
+
+/* ---------- Article hero ---------- */
+.article-hero {
+  position: relative; min-height: 60vh; display: flex; align-items: flex-end;
+  padding-top: var(--nav-h); overflow: hidden; background: var(--gradient-forest);
+}
+.article-hero-media { position: absolute; inset: 0; z-index: 0; }
+.article-hero-media img { width: 100%; height: 100%; object-fit: cover; opacity: 0.55; }
+.article-hero-scrim {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to top, var(--bg) 5%, rgba(7,19,14,0.35) 55%, rgba(7,19,14,0.15) 100%);
+}
+.article-hero-inner { position: relative; z-index: 2; max-width: 880px; padding-block: 3rem 3.5rem; }
+.article-hero h1 { margin-bottom: 1.25rem; }
+.article-hero-meta {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center;
+  font-size: 0.9rem; color: var(--gray);
+}
+.article-hero-meta .author-avatar {
+  width: 32px; height: 32px; border-radius: 50%; object-fit: cover; vertical-align: middle; margin-right: 0.5rem;
+}
+
+/* ---------- Article layout: sidebar TOC + share rail + body ---------- */
+.article-layout {
+  display: grid; grid-template-columns: 220px minmax(0, 1fr) 64px;
+  gap: 3rem; align-items: start;
+}
+
+/* Table of contents (sticky glass-card) */
+.toc-wrap { position: sticky; top: calc(var(--nav-h) + 1.5rem); }
+.toc-card { padding: 1.5rem; }
+.toc-title { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+.toc-list { display: flex; flex-direction: column; gap: 0.65rem; }
+.toc-list a {
+  display: block; font-size: 0.9rem; color: var(--gray); padding-left: 0.9rem;
+  border-left: 2px solid var(--glass-border); transition: color var(--dur-fast), border-color var(--dur-fast);
+}
+.toc-list a:hover { color: var(--off-white); }
+.toc-list a.is-active { color: var(--gold); border-color: var(--gold); font-weight: 600; }
+
+/* Floating share rail */
+.share-rail {
+  position: sticky; top: calc(var(--nav-h) + 1.5rem);
+  display: flex; flex-direction: column; gap: 0.75rem; align-items: center;
+}
+.share-rail .icon-btn { font-size: 1.1rem; }
+.share-rail .icon-btn.is-copied { border-color: var(--gold); color: var(--gold); }
+
+/* Article body */
+.article-body { max-width: 720px; }
+.article-body > .lede { font-size: 1.2rem; color: var(--off-white); margin-bottom: 2rem; }
+.article-body section { margin-bottom: 3rem; scroll-margin-top: calc(var(--nav-h) + 1rem); }
+.article-body h2 { margin-bottom: 1.1rem; }
+.article-body p { margin-bottom: 1.15rem; }
+.article-body p:last-child { margin-bottom: 0; }
+
+.pull-quote {
+  font-family: var(--font-display); font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight: 500;
+  font-style: italic; color: var(--off-white); line-height: 1.4;
+  border-left: 3px solid var(--gold); padding: 0.25rem 0 0.25rem 1.75rem;
+  margin-block: 2.5rem; max-width: 620px;
+}
+.pull-quote cite {
+  display: block; margin-top: 0.9rem; font-family: var(--font-body); font-style: normal;
+  font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600;
+}
+
+.article-figure { margin-block: 2rem; border-radius: var(--radius); overflow: hidden; }
+.article-figure img { width: 100%; height: auto; transition: transform 0.7s var(--ease-out); }
+.article-figure:hover img { transform: scale(1.06); }
+.article-figure figcaption { padding: 0.85rem 0.25rem 0; font-size: 0.85rem; color: var(--gray-dim); }
+
+.article-tags { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 3rem; }
+
+/* Mobile TOC (collapsible details) shown only under the nav breakpoint */
+.toc-mobile { display: none; }
+
+@media (max-width: 1100px) {
+  .article-layout { grid-template-columns: 1fr; }
+  .toc-wrap { position: static; order: -1; display: none; }
+  .share-rail { position: static; flex-direction: row; justify-content: center; margin-bottom: 2rem; }
+  .toc-mobile { display: block; margin-bottom: 2rem; }
+  .toc-mobile summary {
+    cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 1.25rem; font-weight: 600;
+  }
+  .toc-mobile summary::-webkit-details-marker { display: none; }
+  .toc-mobile summary::after { content: '▾'; color: var(--gold); transition: transform var(--dur-fast); }
+  .toc-mobile[open] summary::after { transform: rotate(180deg); }
+  .toc-mobile .toc-list { padding: 0 1.25rem 1.25rem; }
+}
+
+@media (max-width: 900px) {
+  .article-hero { min-height: 50vh; }
+}
+
+/* ---------- Related articles ---------- */
+.related-section .section-head { margin-bottom: 2.5rem; }

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wild &amp; Alive — Faces of the Wild: Animals &amp; Ecosystems</title>
+<meta name="description" content="Meet mammals, birds, marine life, reptiles, insects and forest ecosystems from around the world — an illustrated field guide from Wild & Alive.">
+<meta property="og:title" content="Wild & Alive — Faces of the Wild">
+<meta property="og:description" content="An illustrated deep-dive into mammals, birds, marine life, reptiles, insects and forest ecosystems.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://example.com/animals.html">
+<meta property="og:image" content="https://picsum.photos/id/1001/1200/630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wild & Alive — Faces of the Wild">
+<meta name="twitter:description" content="Mammals, birds, marine life, reptiles, insects and forest ecosystems, up close.">
+<meta name="twitter:image" content="https://picsum.photos/id/1001/1200/630">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+<link rel="canonical" href="https://example.com/animals.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Faces of the Wild — Wild & Alive",
+  "url": "https://example.com/animals.html",
+  "description": "A field guide to mammals, birds, marine life, reptiles, insects and forest ecosystems.",
+  "isPartOf": { "@type": "WebSite", "name": "Wild & Alive", "url": "https://example.com/nature-index.html" }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/wildlife.css">
+<noscript><style>[data-reveal]{opacity:1 !important;transform:none !important;filter:none !important;clip-path:none !important;}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== LOADER ===================== -->
+<div class="loader" role="status" aria-live="polite">
+  <div class="loader-tree" aria-hidden="true">
+    <svg viewBox="0 0 90 110">
+      <g class="trunk">
+        <rect x="40" y="70" width="10" height="35" fill="#5C4033" rx="2"/>
+        <g class="loader-canopy">
+          <circle cx="45" cy="45" r="34" fill="#0B3D2E"/>
+          <circle cx="30" cy="55" r="20" fill="#145c44"/>
+          <circle cx="60" cy="55" r="20" fill="#145c44"/>
+        </g>
+      </g>
+    </svg>
+    <span class="loader-bird" style="top:20px;">𓅃</span>
+  </div>
+  <p class="loader-label">Entering the wild…</p>
+  <span class="loader-percent">0%</span>
+</div>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- ===================== NAV ===================== -->
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a href="nature-index.html" class="brand"><span class="brand-mark">🌿</span> Wild &amp; Alive</a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="nature-index.html">Home</a></li>
+        <li><a href="animals.html" aria-current="page">Animals</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" data-sound-toggle aria-pressed="false" aria-label="Toggle ambient forest sound" title="Ambient sound">🔈</button>
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle light/dark theme" title="Toggle theme">🌓</button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== PAGE TITLE BAND ===================== -->
+  <section class="page-title-band" data-ambient="leaf:8,firefly:6">
+    <div class="ambient-layer">
+      <div class="fog"></div>
+      <div class="fog fog-2"></div>
+    </div>
+    <div class="container page-title-inner">
+      <p class="eyebrow" data-reveal="up">A Field Guide To The Wild</p>
+      <h1 data-reveal="mask">Faces of the Wild</h1>
+      <p class="page-title-sub" data-reveal="up" data-reveal-delay="0.15">
+        From apex predators to the forests that shelter them — eighteen species and ecosystems,
+        organized the way life itself is organized: by kind and by home.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== FILTER BAR ===================== -->
+  <div class="filter-bar" id="filter-bar">
+    <div class="container">
+      <div class="filter-chips" role="group" aria-label="Filter by category">
+        <button class="chip active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-filter="mammals" aria-pressed="false">🐾 Mammals</button>
+        <button class="chip" type="button" data-filter="birds" aria-pressed="false">🦜 Birds</button>
+        <button class="chip" type="button" data-filter="marine" aria-pressed="false">🐋 Marine</button>
+        <button class="chip" type="button" data-filter="reptiles" aria-pressed="false">🐢 Reptiles</button>
+        <button class="chip" type="button" data-filter="insects" aria-pressed="false">🦋 Insects</button>
+        <button class="chip" type="button" data-filter="forests" aria-pressed="false">🌲 Forests</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== MAMMALS ===================== -->
+  <section class="section" id="mammals">
+    <div class="container">
+      <div class="section-head" data-reveal="up">
+        <p class="eyebrow">Category</p>
+        <h2>Mammals</h2>
+        <p>Warm-blooded, fiercely adaptable — the mammals share our world from mountain ridge to savanna floor.</p>
+      </div>
+      <div class="card-grid animal-grid">
+        <article class="glass-card animal-card" data-reveal="scale">
+          <div class="card-media"><img src="https://picsum.photos/id/1001/600/500" alt="Bengal tiger walking through dry forest undergrowth" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Bengal Tiger</h3>
+            <p><em>Panthera tigris tigris</em> — an apex predator of South Asia's mangroves and grasslands, relying on stealth and powerful hind legs to close the final ambush.</p>
+            <span class="tag">Mammal · Endangered</span>
+          </div>
+        </article>
+        <article class="glass-card animal-card" data-reveal="scale" data-reveal-delay="0.1">
+          <div class="card-media"><img src="https://picsum.photos/id/1003/600/500" alt="African elephant herd walking across a dusty savanna" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>African Elephant</h3>
+            <p><em>Loxodonta africana</em> — Earth's largest land mammal, using a trunk of over 40,000 muscles to lift logs, draw water, and greet family members.</p>
+            <span class="tag">Mammal · Endangered</span>
+          </div>
+        </article>
+        <article class="glass-card animal-card" data-reveal="scale" data-reveal-delay="0.2">
+          <div class="card-media"><img src="https://picsum.photos/id/1005/600/500" alt="Gray wolf howling at dusk in a snowy clearing" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Gray Wolf</h3>
+            <p><em>Canis lupus</em> — a highly social pack hunter whose long-distance howls coordinate movement and defend territory across forest and tundra.</p>
+            <span class="tag">Mammal · Least Concern</span>
+          </div>
+        </article>
+        <article class="glass-card animal-card" data-reveal="scale" data-reveal-delay="0.3">
+          <div class="card-media"><img src="https://picsum.photos/id/1008/600/500" alt="Snow leopard resting on a rocky Himalayan ledge" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Snow Leopard</h3>
+            <p><em>Panthera uncia</em> — the "ghost of the mountains," whose smoky rosettes and long tail grant balance on the steepest Himalayan slopes.</p>
+            <span class="tag">Mammal · Vulnerable</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BIRDS ===================== -->
+  <section class="section section-alt" id="birds">
+    <div class="container">
+      <div class="section-head" data-reveal="up">
+        <p class="eyebrow">Category</p>
+        <h2>Birds</h2>
+        <p>Color, song and impossible flight — birds have colonized every sky on the planet.</p>
+      </div>
+      <div class="card-grid animal-grid">
+        <article class="glass-card animal-card" data-reveal="scale">
+          <div class="card-media"><img src="https://picsum.photos/id/1011/600/500" alt="Blue-and-yellow macaw perched among rainforest leaves" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Blue-and-Yellow Macaw</h3>
+            <p><em>Ara ararauna</em> — a vividly plumed parrot of South American rainforests that mates for life and can live more than 30 years in the wild.</p>
+            <span class="tag">Bird · Least Concern</span>
+          </div>
+        </article>
+        <article class="glass-card animal-card" data-reveal="scale" data-reveal-delay="0.1">
+          <div class="card-media"><img src="https://picsum.photos/id/1013/600/500" alt="Harpy eagle with broad wings perched in the forest canopy" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Harpy Eagle</h3>
+            <p><em>Harpia harpyja</em> — one of the world's most powerful raptors, its talons rivaling a grizzly's claws when snatching sloths from the canopy.</p>
+            <span class="tag">Bird · Vulnerable</span>
+          </div>
+        </article>
+        <article class="glass-card animal-card" data-reveal="scale" data-reveal-delay="0.2">
+          <div class="card-media"><img src="https://picsum.photos/id/1016/600/500" alt="Snowy owl perched on a frost-covered branch" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Snowy Owl</h3>
+            <p><em>Bubo scandiacus</em> — an Arctic hunter whose thick white plumage insulates against brutal winters, hunting by daylight unlike most owls.</p>
+            <span class="tag">Bird · Vulnerable</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MARINE ===================== -->
+  <section class="section" id="marine">
+    <div class="container">
+      <div class="section-head" data-reveal="up">
+        <p class="eyebrow">Category</p>
+        <h2>Marine Life</h2>
+        <p>Beneath the surface, an entire living world moves in currents older than the continents.</p>
+      </div>
+      <div class="card-grid animal-grid">
+        <article class="glass-card animal-card" data-reveal="scale">
+          <div class="card-media"><img src="https://picsum.photos/id/1018/600/500" alt="Loggerhead sea turtle gliding over a coral reef" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Loggerhead Sea Turtle</h3>
+            <p><em>Caretta caretta</em> — powerful jaws crush hard-shelled prey, and migrates thousands of miles between feeding grounds and natal beaches.</p>
+            <span class="tag">Marine · Vulnerable</span>
+          </div>
+        </article>
+        <article class="glass-card animal-card" data-reveal="scale" data-reveal-delay="0.1">
+          <div class="card-media"><img src="https://picsum.photos/id/1019/600/500" alt="Common octopus camouflaged against rocks on the sea floor" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Common Octopus</h3>
+            <p><em>Octopus vulgaris</em> — a master of camouflage and problem-solving, changing skin texture and color in a fraction of a second to vanish among reef.</p>
+            <span class="tag">Marine · Least Concern</span>
+          </div>
+        </article>
+        <article class="glass-card animal-card" data-reveal="scale" data-reveal-delay="0.2">
+          <div class="card-media"><img src="https://picsum.photos/id/1021/600/500" alt="Orca surfacing beside its pod in open ocean" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Orca (Killer Whale)</h3>
+            <p><em>Orcinus orca</em> — a highly intelligent apex predator that travels in tight-knit matrilineal pods, using coordinated strategies to hunt.</p>
+            <span class="tag">Marine · Near Threatened</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REPTILES ===================== -->
+  <section class="section section-alt" id="reptiles">
+    <div class="container">
+      <div class="section-head" data-reveal="up">
+        <p class="eyebrow">Category</p>
+        <h2>Reptiles</h2>
+        <p>Cold-blooded survivors that have outlasted ice ages, still ruling riverbanks and islands alike.</p>
+      </div>
+      <div class="card-grid animal-grid">
+        <article class="glass-card animal-card" data-reveal="scale">
+          <div class="card-media"><img src="https://picsum.photos/id/1022/600/500" alt="Panther chameleon gripping a branch, skin in vivid color" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Panther Chameleon</h3>
+            <p><em>Furcifer pardalis</em> — a Madagascar native famed for dazzling color shifts driven as much by mood and temperature as by camouflage.</p>
+            <span class="tag">Reptile · Least Concern</span>
+          </div>
+        </article>
+        <article class="glass-card animal-card" data-reveal="scale" data-reveal-delay="0.1">
+          <div class="card-media"><img src="https://picsum.photos/id/1024/600/500" alt="Saltwater crocodile floating low in murky estuary water" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Saltwater Crocodile</h3>
+            <p><em>Crocodylus porosus</em> — the largest living reptile, an ambush predator patrolling estuaries and coastlines from India to Australia.</p>
+            <span class="tag">Reptile · Least Concern</span>
+          </div>
+        </article>
+        <article class="glass-card animal-card" data-reveal="scale" data-reveal-delay="0.2">
+          <div class="card-media"><img src="https://picsum.photos/id/1026/600/500" alt="Galápagos tortoise grazing on low island vegetation" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Galápagos Tortoise</h3>
+            <p><em>Chelonoidis niger</em> — a giant island tortoise that can live over a century, shaping its ecosystem through grazing and seed dispersal.</p>
+            <span class="tag">Reptile · Vulnerable</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INSECTS ===================== -->
+  <section class="section" id="insects">
+    <div class="container">
+      <div class="section-head" data-reveal="up">
+        <p class="eyebrow">Category</p>
+        <h2>Insects</h2>
+        <p>Small in size, immense in impact — insects pollinate, recycle and sustain nearly every ecosystem on Earth.</p>
+      </div>
+      <div class="card-grid animal-grid">
+        <article class="glass-card animal-card" data-reveal="scale">
+          <div class="card-media"><img src="https://picsum.photos/id/1027/600/500" alt="Monarch butterfly resting on an orange milkweed flower" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Monarch Butterfly</h3>
+            <p><em>Danaus plexippus</em> — famed for a multigenerational migration spanning thousands of miles between North America and Mexican overwintering forests.</p>
+            <span class="tag">Insect · Endangered</span>
+          </div>
+        </article>
+        <article class="glass-card animal-card" data-reveal="scale" data-reveal-delay="0.1">
+          <div class="card-media"><img src="https://picsum.photos/id/1028/600/500" alt="European honeybee gathering pollen from a flower" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>European Honeybee</h3>
+            <p><em>Apis mellifera</em> — a keystone pollinator whose waggle dance communicates precise flower locations to the rest of the hive.</p>
+            <span class="tag">Insect · Least Concern</span>
+          </div>
+        </article>
+        <article class="glass-card animal-card" data-reveal="scale" data-reveal-delay="0.2">
+          <div class="card-media"><img src="https://picsum.photos/id/1029/600/500" alt="Green darner dragonfly perched on a reed above a pond" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Green Darner Dragonfly</h3>
+            <p><em>Anax junius</em> — a swift aerial predator and one of the few dragonflies known to migrate seasonally across North America.</p>
+            <span class="tag">Insect · Least Concern</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FORESTS (ecosystems) ===================== -->
+  <section class="section section-alt" id="forests">
+    <div class="container">
+      <div class="section-head" data-reveal="up">
+        <p class="eyebrow">Category</p>
+        <h2>Forests &amp; Ecosystems</h2>
+        <p>Not every face of the wild has fur or feathers — these living landscapes shelter everything above.</p>
+      </div>
+      <div class="card-grid animal-grid">
+        <article class="glass-card animal-card" data-reveal="scale">
+          <div class="card-media"><img src="https://picsum.photos/id/1031/600/500" alt="Giant sequoia trees towering over a misty grove" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Giant Sequoia Grove</h3>
+            <p><em>Sequoiadendron giganteum</em> — among the most massive living organisms on Earth, protected by thick, fire-resistant bark that lets groves outlast the blazes that clear competing growth.</p>
+            <span class="tag">Forest · Endangered</span>
+          </div>
+        </article>
+        <article class="glass-card animal-card" data-reveal="scale" data-reveal-delay="0.1">
+          <div class="card-media"><img src="https://picsum.photos/id/1033/600/500" alt="Mangrove forest roots tangled in shallow coastal water" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Mangrove Forest</h3>
+            <p><em>Rhizophora</em> spp. — tangled root systems buffer coastlines from storms while nursing juvenile fish and shrimp among their submerged roots.</p>
+            <span class="tag">Forest · Vulnerable</span>
+          </div>
+        </article>
+        <article class="glass-card animal-card" data-reveal="scale" data-reveal-delay="0.2">
+          <div class="card-media"><img src="https://picsum.photos/id/1036/600/500" alt="Sunlight filtering through a dense rainforest canopy" loading="lazy" width="600" height="500"></div>
+          <div class="card-body">
+            <h3>Rainforest Canopy</h3>
+            <p>Amazon Basin — a layered ecosystem hosting more biodiversity per hectare than almost anywhere on Earth, home to an estimated 10% of known species.</p>
+            <span class="tag">Forest · Critically Endangered</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-wave" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path class="wave-path" d="M0,60 C150,110 350,10 600,60 C850,110 1050,10 1200,60 L1200,120 L0,120 Z" fill="#07130E"/>
+    </svg>
+  </div>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <a href="nature-index.html" class="brand"><span class="brand-mark">🌿</span> Wild &amp; Alive</a>
+      <p>Cinematic stories from forests, oceans and skies — in service of the wild.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="animals.html">Animals</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">Newsletter</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Wild &amp; Alive. All rights reserved.</span>
+    <span>Made with care for the wild.</span>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+<script type="module">
+  import { lenis, reducedMotion } from './js/main.js';
+
+  // Theme toggle (shared behaviour with other pages)
+  const themeBtn = document.querySelector('[data-theme-toggle]');
+  themeBtn?.addEventListener('click', () => {
+    const root = document.documentElement;
+    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+  });
+
+  // ---------------------------------------------------------------------
+  // Filter chip bar: scrolls to matching section + tracks active section
+  // ---------------------------------------------------------------------
+  const chips = Array.from(document.querySelectorAll('.filter-bar .chip'));
+  const sections = ['mammals', 'birds', 'marine', 'reptiles', 'insects', 'forests']
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+
+  function setActive(filter) {
+    chips.forEach((chip) => {
+      const isActive = chip.dataset.filter === filter;
+      chip.classList.toggle('active', isActive);
+      chip.setAttribute('aria-pressed', String(isActive));
+    });
+  }
+
+  function scrollToTarget(el) {
+    const offset = document.querySelector('.filter-bar')?.offsetHeight || 0;
+    const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 88;
+    if (lenis && !reducedMotion) {
+      lenis.scrollTo(el, { offset: -(navH + offset) });
+    } else {
+      const top = el.getBoundingClientRect().top + window.scrollY - (navH + offset);
+      window.scrollTo({ top, behavior: reducedMotion ? 'auto' : 'smooth' });
+    }
+  }
+
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const filter = chip.dataset.filter;
+      setActive(filter);
+      if (filter === 'all') {
+        scrollToTarget(document.querySelector('.page-title-band'));
+        return;
+      }
+      const target = document.getElementById(filter);
+      if (target) scrollToTarget(target);
+    });
+  });
+
+  // Scroll-spy: highlight the chip for whichever section is in view
+  if ('IntersectionObserver' in window) {
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+    sections.forEach((sec) => spy.observe(sec));
+  }
+</script>
+</body>
+</html>

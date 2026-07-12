@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wild &amp; Alive — Through the Lens: Nature Photography Gallery</title>
+<meta name="description" content="A cinematic photography gallery of wildlife, landscapes, marine life, birds and macro nature shots — browse, filter and view full-screen.">
+<meta property="og:title" content="Wild & Alive — Through the Lens">
+<meta property="og:description" content="A curated photography collection spanning wildlife, landscapes, oceans, birds and macro nature.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://example.com/gallery.html">
+<meta property="og:image" content="https://picsum.photos/id/110/1200/630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wild & Alive — Through the Lens">
+<meta name="twitter:description" content="Wildlife, landscapes, oceans, birds and macro nature — a photography gallery.">
+<meta name="twitter:image" content="https://picsum.photos/id/110/1200/630">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+<link rel="canonical" href="https://example.com/gallery.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Through the Lens — Wild & Alive",
+  "url": "https://example.com/gallery.html",
+  "description": "A curated photography collection spanning wildlife, landscapes, oceans, birds and macro nature.",
+  "isPartOf": { "@type": "WebSite", "name": "Wild & Alive", "url": "https://example.com/nature-index.html" }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="css/gallery.css">
+<noscript><style>[data-reveal]{opacity:1 !important;transform:none !important;filter:none !important;clip-path:none !important;}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== LOADER ===================== -->
+<div class="loader" role="status" aria-live="polite">
+  <div class="loader-tree" aria-hidden="true">
+    <svg viewBox="0 0 90 110">
+      <g class="trunk">
+        <rect x="40" y="70" width="10" height="35" fill="#5C4033" rx="2"/>
+        <g class="loader-canopy">
+          <circle cx="45" cy="45" r="34" fill="#0B3D2E"/>
+          <circle cx="30" cy="55" r="20" fill="#145c44"/>
+          <circle cx="60" cy="55" r="20" fill="#145c44"/>
+        </g>
+      </g>
+    </svg>
+    <span class="loader-bird" style="top:20px;">𓅃</span>
+  </div>
+  <p class="loader-label">Entering the wild…</p>
+  <span class="loader-percent">0%</span>
+</div>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- ===================== NAV ===================== -->
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a href="nature-index.html" class="brand"><span class="brand-mark">🌿</span> Wild &amp; Alive</a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="nature-index.html">Home</a></li>
+        <li><a href="animals.html">Animals</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" data-sound-toggle aria-pressed="false" aria-label="Toggle ambient forest sound" title="Ambient sound">🔈</button>
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle light/dark theme" title="Toggle theme">🌓</button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== PAGE TITLE BAND ===================== -->
+  <section class="page-title-band" data-ambient="leaf:8,firefly:6">
+    <div class="ambient-layer">
+      <div class="fog"></div>
+      <div class="fog fog-2"></div>
+    </div>
+    <div class="container page-title-inner">
+      <p class="eyebrow" data-reveal="up">A Photography Collection</p>
+      <h1 data-reveal="mask">Through the Lens</h1>
+      <p class="page-title-sub" data-reveal="up" data-reveal-delay="0.15">
+        Wildlife, landscapes, oceans, birds and the smallest macro details — moments from the field,
+        framed to be seen full-screen.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURED SPOTLIGHT (Swiper) ===================== -->
+  <section class="section" id="spotlight">
+    <div class="container">
+      <div class="section-head" data-reveal="up">
+        <p class="eyebrow">Featured Spotlight</p>
+        <h2>Six Frames Worth Stopping For</h2>
+      </div>
+    </div>
+    <div class="container" data-reveal="scale">
+      <div class="swiper spotlight-swiper" aria-roledescription="carousel" aria-label="Featured spotlight photographs">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/id/110/1400/860" alt="Lioness resting on a sunlit savanna outcrop" loading="lazy" data-full="https://picsum.photos/id/110/1800/1100">
+            <p class="spotlight-caption">The Savanna at Golden Hour</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/id/130/1400/860" alt="Whale tail rising above calm ocean water" loading="lazy" data-full="https://picsum.photos/id/130/1800/1100">
+            <p class="spotlight-caption">Giants of the Deep</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/id/152/1400/860" alt="Mist rolling over an emerald rice-terrace valley" loading="lazy" data-full="https://picsum.photos/id/152/1800/1100">
+            <p class="spotlight-caption">Valleys Wrapped in Mist</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/id/175/1400/860" alt="Puffin standing on a grassy sea cliff" loading="lazy" data-full="https://picsum.photos/id/175/1800/1100">
+            <p class="spotlight-caption">Cliffside Colonies</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/id/190/1400/860" alt="Northern lights glowing above a snowy pine forest" loading="lazy" data-full="https://picsum.photos/id/190/1800/1100">
+            <p class="spotlight-caption">Skies Set Ablaze</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/id/210/1400/860" alt="Leopard resting in the fork of an acacia tree" loading="lazy" data-full="https://picsum.photos/id/210/1800/1100">
+            <p class="spotlight-caption">Watching From Above</p>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <button class="swiper-button-prev" aria-label="Previous spotlight photo"></button>
+        <button class="swiper-button-next" aria-label="Next spotlight photo"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MASONRY GALLERY ===================== -->
+  <section class="section section-alt" id="full-gallery">
+    <div class="container">
+      <div class="section-head center" data-reveal="up">
+        <p class="eyebrow">The Full Collection</p>
+        <h2>Browse Every Frame</h2>
+      </div>
+      <div class="filter-chips" role="group" aria-label="Filter photographs by category" data-reveal="up">
+        <button class="chip active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-filter="wildlife" aria-pressed="false">Wildlife</button>
+        <button class="chip" type="button" data-filter="landscapes" aria-pressed="false">Landscapes</button>
+        <button class="chip" type="button" data-filter="marine" aria-pressed="false">Marine</button>
+        <button class="chip" type="button" data-filter="birds" aria-pressed="false">Birds</button>
+        <button class="chip" type="button" data-filter="macro" aria-pressed="false">Macro</button>
+      </div>
+
+      <div class="masonry" id="gallery-masonry">
+        <img src="https://picsum.photos/id/225/500/650" data-full="https://picsum.photos/id/225/1400/1820" data-category="wildlife" alt="Red fox pausing on a woodland trail at dawn" loading="lazy" data-reveal="scale">
+        <img src="https://picsum.photos/id/240/500/380" data-full="https://picsum.photos/id/240/1400/1060" data-category="landscapes" alt="Layered mountain ridgelines fading into morning fog" loading="lazy" data-reveal="scale" data-reveal-delay="0.05">
+        <img src="https://picsum.photos/id/250/500/620" data-full="https://picsum.photos/id/250/1400/1740" data-category="marine" alt="Sunlight rays piercing a deep blue coral reef" loading="lazy" data-reveal="scale" data-reveal-delay="0.1">
+        <img src="https://picsum.photos/id/260/500/430" data-full="https://picsum.photos/id/260/1400/1200" data-category="birds" alt="Flamingos wading in a mirror-still lagoon" loading="lazy" data-reveal="scale" data-reveal-delay="0.15">
+        <img src="https://picsum.photos/id/275/500/560" data-full="https://picsum.photos/id/275/1400/1570" data-category="macro" alt="Dew drops clinging to a spiderweb at sunrise" loading="lazy" data-reveal="scale" data-reveal-delay="0.2">
+        <img src="https://picsum.photos/id/290/500/700" data-full="https://picsum.photos/id/290/1400/1960" data-category="wildlife" alt="Brown bear fishing in a rushing river" loading="lazy" data-reveal="scale">
+        <img src="https://picsum.photos/id/305/500/400" data-full="https://picsum.photos/id/305/1400/1120" data-category="landscapes" alt="Golden dunes rippling under a wide desert sky" loading="lazy" data-reveal="scale" data-reveal-delay="0.05">
+        <img src="https://picsum.photos/id/320/500/640" data-full="https://picsum.photos/id/320/1400/1790" data-category="marine" alt="A pod of dolphins arcing above the waves" loading="lazy" data-reveal="scale" data-reveal-delay="0.1">
+        <img src="https://picsum.photos/id/335/500/460" data-full="https://picsum.photos/id/335/1400/1290" data-category="birds" alt="Bald eagle gliding over a coastal cliff" loading="lazy" data-reveal="scale" data-reveal-delay="0.15">
+        <img src="https://picsum.photos/id/350/500/540" data-full="https://picsum.photos/id/350/1400/1510" data-category="macro" alt="Frost patterns forming on a fallen leaf" loading="lazy" data-reveal="scale" data-reveal-delay="0.2">
+        <img src="https://picsum.photos/id/365/500/660" data-full="https://picsum.photos/id/365/1400/1850" data-category="wildlife" alt="Red panda climbing a moss-covered branch" loading="lazy" data-reveal="scale">
+        <img src="https://picsum.photos/id/380/500/420" data-full="https://picsum.photos/id/380/1400/1180" data-category="landscapes" alt="Waterfall cascading through a fern-lined gorge" loading="lazy" data-reveal="scale" data-reveal-delay="0.05">
+        <img src="https://picsum.photos/id/395/500/600" data-full="https://picsum.photos/id/395/1400/1680" data-category="marine" alt="Jellyfish drifting through sunlit open water" loading="lazy" data-reveal="scale" data-reveal-delay="0.1">
+        <img src="https://picsum.photos/id/410/500/450" data-full="https://picsum.photos/id/410/1400/1260" data-category="birds" alt="Kingfisher diving toward a still pond" loading="lazy" data-reveal="scale" data-reveal-delay="0.15">
+        <img src="https://picsum.photos/id/425/500/580" data-full="https://picsum.photos/id/425/1400/1620" data-category="macro" alt="Close-up of morning dew on a butterfly's wing" loading="lazy" data-reveal="scale" data-reveal-delay="0.2">
+        <img src="https://picsum.photos/id/440/500/410" data-full="https://picsum.photos/id/440/1400/1150" data-category="wildlife" alt="Herd of bison grazing on an open prairie" loading="lazy" data-reveal="scale">
+        <img src="https://picsum.photos/id/455/500/630" data-full="https://picsum.photos/id/455/1400/1770" data-category="landscapes" alt="Volcanic peak reflected in a glassy alpine lake" loading="lazy" data-reveal="scale" data-reveal-delay="0.05">
+        <img src="https://picsum.photos/id/470/500/470" data-full="https://picsum.photos/id/470/1400/1320" data-category="marine" alt="Sea lions basking on sun-warmed coastal rocks" loading="lazy" data-reveal="scale" data-reveal-delay="0.1">
+      </div>
+      <p class="gallery-empty" id="gallery-empty" hidden>No photographs match this filter yet — try another category.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== LIGHTBOX ===================== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true" hidden>
+  <div class="lightbox-backdrop" data-lightbox-close></div>
+  <div class="lightbox-content">
+    <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close photo viewer">&#10005;</button>
+    <button class="lightbox-prev" type="button" aria-label="Previous photo">&#10094;</button>
+    <figure class="lightbox-figure">
+      <img class="lightbox-img" src="" alt="">
+      <figcaption class="lightbox-caption"></figcaption>
+    </figure>
+    <button class="lightbox-next" type="button" aria-label="Next photo">&#10095;</button>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-wave" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path class="wave-path" d="M0,60 C150,110 350,10 600,60 C850,110 1050,10 1200,60 L1200,120 L0,120 Z" fill="#07130E"/>
+    </svg>
+  </div>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <a href="nature-index.html" class="brand"><span class="brand-mark">🌿</span> Wild &amp; Alive</a>
+      <p>Cinematic stories from forests, oceans and skies — in service of the wild.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="animals.html">Animals</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">Newsletter</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Wild &amp; Alive. All rights reserved.</span>
+    <span>Made with care for the wild.</span>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/gallery.js"></script>
+</body>
+</html>

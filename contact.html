@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Wild &amp; Alive</title>
+<meta name="description" content="Get in touch with the Wild & Alive studio — partnership inquiries, story pitches, conservation collaborations and general questions welcome.">
+<meta property="og:title" content="Contact — Wild &amp; Alive">
+<meta property="og:description" content="Reach the Wild & Alive team — partnerships, pitches and conservation collaborations welcome.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://example.com/contact.html">
+<meta property="og:image" content="https://picsum.photos/id/1043/1200/630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — Wild &amp; Alive">
+<meta name="twitter:description" content="Reach the Wild & Alive team — partnerships, pitches and conservation collaborations welcome.">
+<meta name="twitter:image" content="https://picsum.photos/id/1043/1200/630">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+<link rel="canonical" href="https://example.com/contact.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact — Wild & Alive",
+  "url": "https://example.com/contact.html",
+  "description": "Contact the Wild & Alive studio for partnerships, story pitches and general inquiries.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Wild & Alive",
+    "url": "https://example.com/nature-index.html"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/contact.css">
+<noscript><style>[data-reveal]{opacity:1 !important;transform:none !important;filter:none !important;clip-path:none !important;}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== LOADER ===================== -->
+<div class="loader" role="status" aria-live="polite">
+  <div class="loader-tree" aria-hidden="true">
+    <svg viewBox="0 0 90 110">
+      <g class="trunk">
+        <rect x="40" y="70" width="10" height="35" fill="#5C4033" rx="2"/>
+        <g class="loader-canopy">
+          <circle cx="45" cy="45" r="34" fill="#0B3D2E"/>
+          <circle cx="30" cy="55" r="20" fill="#145c44"/>
+          <circle cx="60" cy="55" r="20" fill="#145c44"/>
+        </g>
+      </g>
+    </svg>
+    <span class="loader-bird" style="top:20px;">𓅃</span>
+  </div>
+  <p class="loader-label">Entering the wild…</p>
+  <span class="loader-percent">0%</span>
+</div>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- ===================== NAV ===================== -->
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a href="nature-index.html" class="brand"><span class="brand-mark">🌿</span> Wild &amp; Alive</a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="nature-index.html">Home</a></li>
+        <li><a href="animals.html">Animals</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" data-sound-toggle aria-pressed="false" aria-label="Toggle ambient forest sound" title="Ambient sound">🔈</button>
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle light/dark theme" title="Toggle theme">🌓</button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== PAGE TITLE BAND ===================== -->
+  <section class="page-band" data-ambient="firefly:10,leaf:6,star:14">
+    <div class="ambient-layer">
+      <div class="fog"></div>
+      <div class="fog fog-2"></div>
+    </div>
+    <div class="container page-band-inner">
+      <p class="eyebrow" data-reveal="up">Get In Touch</p>
+      <h1 data-reveal="mask">Let's Start A Conversation</h1>
+      <p class="page-band-sub" data-reveal="up" data-reveal-delay="0.2">
+        Story pitches, conservation partnerships, press inquiries or just a hello from a
+        fellow wildlife lover — we read every message.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT FORM + INFO ===================== -->
+  <section class="section">
+    <div class="container contact-grid">
+
+      <!-- Form -->
+      <div class="glass-card contact-form-card" data-reveal="left">
+        <h2>Send A Message</h2>
+        <form id="contact-form" novalidate>
+          <div class="form-field">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" required autocomplete="name" aria-describedby="error-name">
+            <span class="field-error" id="error-name" role="alert"></span>
+          </div>
+          <div class="form-field">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" required autocomplete="email" aria-describedby="error-email">
+            <span class="field-error" id="error-email" role="alert"></span>
+          </div>
+          <div class="form-field">
+            <label for="contact-subject">Subject</label>
+            <input type="text" id="contact-subject" name="subject" required autocomplete="off" aria-describedby="error-subject">
+            <span class="field-error" id="error-subject" role="alert"></span>
+          </div>
+          <div class="form-field">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" required aria-describedby="error-message"></textarea>
+            <span class="field-error" id="error-message" role="alert"></span>
+          </div>
+          <button class="btn btn-primary magnetic" type="submit">Send Message <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+      </div>
+
+      <!-- Info + illustrative map -->
+      <div class="glass-card contact-info-card" data-reveal="right">
+        <h2>Find Us</h2>
+        <ul class="contact-details">
+          <li><span class="contact-icon" aria-hidden="true">✉️</span> <a href="mailto:hello@wildandalive.earth">hello@wildandalive.earth</a></li>
+          <li><span class="contact-icon" aria-hidden="true">📍</span> Cape Town, South Africa</li>
+          <li><span class="contact-icon" aria-hidden="true">🌐</span> Field correspondents on five continents</li>
+        </ul>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+          <a href="#">Newsletter</a>
+        </div>
+        <div class="map-illustration" aria-hidden="true">
+          <svg viewBox="0 0 980 480" role="img" aria-label="Stylized illustration marking our studio location in Africa">
+            <line class="map-grid-line" x1="0" y1="120" x2="980" y2="120"/>
+            <line class="map-grid-line" x1="0" y1="240" x2="980" y2="240"/>
+            <line class="map-grid-line" x1="0" y1="360" x2="980" y2="360"/>
+            <line class="map-grid-line" x1="245" y1="0" x2="245" y2="480"/>
+            <line class="map-grid-line" x1="490" y1="0" x2="490" y2="480"/>
+            <line class="map-grid-line" x1="735" y1="0" x2="735" y2="480"/>
+            <path class="continent-shape" d="M470,150 L560,140 L600,220 L560,320 L500,360 L460,300 L440,220 Z"/>
+            <path class="continent-shape" d="M600,80 L820,70 L860,180 L760,220 L660,200 L610,150 Z"/>
+            <path class="continent-shape" d="M150,70 L260,90 L280,220 L220,360 L160,400 L120,260 L110,150 Z"/>
+            <path class="continent-shape" d="M780,300 L870,290 L890,360 L800,380 Z"/>
+            <path class="continent-shape" d="M470,60 L560,50 L580,110 L500,130 L460,100 Z"/>
+            <circle class="map-pin-ring" cx="500" cy="290" r="6"/>
+            <circle class="map-pin-dot" cx="500" cy="290" r="6"/>
+          </svg>
+          <p class="map-caption">Studio HQ — Cape Town, South Africa</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-wave" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path class="wave-path" d="M0,60 C150,110 350,10 600,60 C850,110 1050,10 1200,60 L1200,120 L0,120 Z" fill="#07130E"/>
+    </svg>
+  </div>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <a href="nature-index.html" class="brand"><span class="brand-mark">🌿</span> Wild &amp; Alive</a>
+      <p>Cinematic stories from forests, oceans and skies — in service of the wild.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="animals.html">Animals</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">Newsletter</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Wild &amp; Alive. All rights reserved.</span>
+    <span>Made with care for the wild.</span>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/contact.js"></script>
+<script>
+  // Theme toggle (kept local to this page, mirrors nature-index.html's inline handler)
+  document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
+    const root = document.documentElement;
+    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+  });
+</script>
+</body>
+</html>
